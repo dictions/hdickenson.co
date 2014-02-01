@@ -1,0 +1,11 @@
+{
+  "name": "hdickenson.co",
+  "version": "0.1.0",
+  "homepage": "https://github.com/dictions/hdickenson.co",
+  "authors": [
+    "Ian Williams <me@ianwillia.ms>"
+  ],
+  "description": "portfolio site of Hunter Dickenson",
+  "license": "Apache",
+  "private": true
+}
