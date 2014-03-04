@@ -11,14 +11,14 @@ var gulp = require('gulp'),
 
 // Less preprocessing
 gulp.task('less', function() {
-	gulp.src('src/styles/*.less')
+	gulp.src('public/styles/less/main.less')
 	.pipe(less())
-	.pipe(gulp.dest('src/tmp/styles'));
+	.pipe(gulp.dest('public/styles/css'));
 });
 
 //JS Linting
 gulp.task('lint', function(){
-	gulp.src('src/js/*.js')
+	gulp.src('public/js/*.js')
 	.pipe(jshint())
 	.pipe(jshint.reporter(stylish));
 });
@@ -32,8 +32,7 @@ var createServers = function(port, lrport) {
 
 	var app = express();
 	// First check tmp directory, then check src for assets
-	app.use(express.static(path.resolve('src/tmp')));
-	app.use(express.static(path.resolve('src')));
+	app.use(express.static(path.resolve('public')));
 	app.listen(port, function() {
 		gutil.log('Listening on', port);
 	});
@@ -49,11 +48,11 @@ gulp.task('watch', function(){
 	// Start and watch dev servers – LiveReload plugin required
 	var servers = createServers(8080, 35729);
 
-	// generate initial css in tmp directory
+	// generate initial css
 	gulp.run('less');
 
 	// watch and process less
-	gulp.watch('src/styles/*.less', function(event){
+	gulp.watch('public/styles/less/**/*.less', function(event){
 		gulp.run('less');
 		gutil.log(gutil.colors.cyan(event.path), 'changed');
 		servers.lr.changed({
@@ -72,7 +71,7 @@ gulp.task('watch', function(){
 		});
 	});
 	// watch js for changes
-	gulp.watch(['src/js/*.js'], function(event){
+	gulp.watch(['public/js/*.js'], function(event){
 		gulp.run('lint');
 		gutil.log(gutil.colors.red(event.path), 'changed');
 		servers.lr.changed({

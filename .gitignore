@@ -1,7 +1,6 @@
 .DS_Store
 node_modules/
-src/lib
-src/tmp
+public/lib
 
 *.sublime-project
 *.sublime-workspace

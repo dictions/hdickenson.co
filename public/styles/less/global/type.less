@@ -1,0 +1,46 @@
+@stack-lato: 'Lato', san-serif;
+@stack-raleway: 'Raleway', sans-serif;
+
+// MIXINS
+.font (@stack, @weight, @style, @decoration, @transform) {
+	font-family: @stack;
+	font-weight: @weight;
+	font-style: @style;
+	text-decoration: @decoration;
+	text-transform: @transform;
+}
+
+
+
+// COPY THIS TO ABOVE THE FOLD
+html, body {
+	font-family: @stack-lato;
+	font-weight: 400;
+	font-size: 16px;
+	color: @blue;
+}
+
+b {
+	font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @stack-raleway;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.link-me-bro {
+	.box-radius;
+	border: @stroke solid;
+	.font(@stack-raleway, 900, normal, none, uppercase);
+	font-size: 0.875rem;
+	letter-spacing: 0.25em;
+	padding: 0.875rem;
+}
+//END ABOVE THE FOLD
