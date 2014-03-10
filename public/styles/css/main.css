@@ -67,7 +67,7 @@
   }
 }
 .row {
-  padding: 1rem;
+  padding: 0.5rem;
   position: relative;
 }
 .row:before,
@@ -79,68 +79,68 @@
   clear: both;
 }
 .c-12 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 100%;
 }
 .c-11 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 100%;
   width: 91.66666666666667%;
 }
 .c-10 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 100%;
   width: 83.33333333333334%;
 }
 .c-9 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 100%;
   width: 75%;
 }
 .c-8 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 100%;
   width: 66.66666666666667%;
 }
 .c-7 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 100%;
   width: 58.333333333333336%;
 }
 .c-6 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 50%;
 }
 .c-5 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 100%;
   width: 41.66666666666667%;
 }
 .c-4 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 33.333333333333336%;
 }
 .c-3 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 25%;
 }
 .c-2 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 16.666666666666668%;
 }
 .c-1 {
-  padding: 1rem;
+  padding: 0.5rem;
   float: left;
   width: 8.333333333333334%;
 }
@@ -222,7 +222,7 @@ a {
 }
 #hero {
   margin-top: -30px;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
   text-align: center;
 }
 #hero hgroup {
@@ -258,6 +258,9 @@ a {
 #portfolio li,
 #portfolio img {
   display: block;
+}
+#portfolio li {
+  margin-bottom: 1rem;
 }
 #root-footer {
   text-align: center;
