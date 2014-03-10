@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,50 +32,37 @@
 		s.parentNode.insertBefore(wf, s);
 	})(); 
 	</script>
-	<!--Styles-->
+	<!--Above the fold styles-->
 	<style type="text/css">
 	</style>
 </head>
 <body>
-	<!--[if lt IE 7]>
+	<!--[if lt IE 11]>
 		<p class="browsehappy">Aw shucks! You should probably <a href="http://browsehappy.com/">upgrade your browser.</a></p>
 	<![endif]-->
 
-	<header id="root-header">
-		<nav class="header-nav">
-			<ul>
-				<li>WORK</li>
-				<li>JOURNAL</li>
-				<li>ABOUT</li>
-				<li>CONTACT</li>
-			</ul>
-		</nav>
-		<div id="header-about-content">
-			<img src="">
-			<h3>HELLO, I'M HUNTER.</h3>
+	<header id="hero" class="bg-yellow">
 
-			<p>alk asdlfkj asdflkjasdfkj asdflkj asdfkj asdfkj asdf;lj asdfk;j asd;flkj asd;flj asd;lfj asdf</p>
-			<p>asdfk asdf;lkj asdf;kj asdfj asdf;lj asdf;lkj asd;lfj asd;lfj asd;lkfj asdlfj asd;lfkj asd;flkj asd;flkj asdfkj asdf;klj asdlf;kj asdflkj asdfl;kj asdfl;kj asd;flkj asdf;lja sdf;lkja sdfl;ja sdflkja sdfl;kjas dfl;ja sdflkjasd f asd;a sdjsl asdl sl fsds</p>
+		<hgroup>
+			<h1>Hunter Dickenson</h1>
+			<h2>Illustrator &bull; Printmaker 
+			<br> Craftsman</h2>
+		</hgroup>
 
-			<a href="" class="link-me-bro white">available for hire</a>
+		<footer>
+			<a href="" id="hero-call" class="link-me-bro">see work</a>
+		</footer>
 
-			<nav class="contact-nav">
-				<ul>
-					<li>Email</li>
-					<li>Dribbble</li>
-					<li>Instagram</li>
-					<li>Facebook</li>
-				</ul>
-			</nav>
-		</div>
-
-		<a href="" id="call" class="link-me-bro">see work</a>
-
-	</header>
+	</header><!--#hero-->
 
 	<div id="main-container">
-		<ul id="portfolio-list">
-			<li><a href=""><img src=""></a></li>
+		<ul id="portfolio">
+			<li><a href=""><img src="http://placehold.it/242x484"></a></li>
+			<li><a href=""><img src="http://placehold.it/484x242"></a></li>
+			<li><a href=""><img src="http://placehold.it/242x242"></a></li>
+			<li><a href=""><img src="http://placehold.it/242x484"></a></li>
+			<li><a href=""><img src="http://placehold.it/242x242"></a></li>
+			<li><a href=""><img src="http://placehold.it/242x242"></a></li>
 		</ul>
 
 		<div class="row">
@@ -131,11 +115,11 @@
 		</nav>
 	</div>
 
-	<footer>
-		<img src="">
-		<a href="" class="available hire-status">AVAILABLE FOR HIRE</a>
+	<footer id="root-footer" class="clearfix">
+		<img src="img/footer-logo.svg">
+		<a href="" class="link-me-bro">AVAILABLE FOR HIRE</a>
 		<nav class="contact-nav">
-			<ul>
+			<ul class="clearfix">
 				<li>Email</li>
 				<li>Dribbble</li>
 				<li>Instagram</li>
@@ -146,6 +130,7 @@
 
 	<!--Scripts-->
 	<script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="//masonry.desandro.com/masonry.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

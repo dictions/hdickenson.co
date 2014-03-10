@@ -1,5 +1,8 @@
-// COPY THIS ABOVE THE FOLD
-#root-header {
-	background: @yellow;
+html, body, #hero {
+	height: 100%;
 }
-// END ABOVE THE FOLD
+
+// apply a natural box layout model to all elements
+*, *:before, *:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}

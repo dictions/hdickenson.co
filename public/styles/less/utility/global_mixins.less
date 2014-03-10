@@ -6,6 +6,9 @@
   background-clip: padding-box; /* Android 2.2+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 4+ */
 }
 
-.border-box {
-	box-sizing: border-box;
+.transform (@transform-stuff) {
+	-webkit-transform: @transform-stuff;
+	   -moz-transform: @transform-stuff;
+	     -o-transform: @transform-stuff;
+	        transform: @transform-stuff;
 }

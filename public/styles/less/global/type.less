@@ -1,7 +1,6 @@
 @stack-lato: 'Lato', san-serif;
 @stack-raleway: 'Raleway', sans-serif;
 
-// MIXINS
 .font (@stack, @weight, @style, @decoration, @transform) {
 	font-family: @stack;
 	font-weight: @weight;
@@ -10,9 +9,6 @@
 	text-transform: @transform;
 }
 
-
-
-// COPY THIS TO ABOVE THE FOLD
 html, body {
 	font-family: @stack-lato;
 	font-weight: 400;
@@ -28,6 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: @stack-raleway;
 	font-weight: 800;
 	text-transform: uppercase;
+	line-height: 1em;
 }
 
 a {
@@ -39,8 +36,25 @@ a {
 	.box-radius;
 	border: @stroke solid;
 	.font(@stack-raleway, 900, normal, none, uppercase);
-	font-size: 0.875rem;
+	font-size: 1.125rem;
 	letter-spacing: 0.25em;
-	padding: 0.875rem;
+	padding: 0.875em 1.25em 0.875em 1.25em;
+	display: inline-block;
 }
-//END ABOVE THE FOLD
+
+.contact-nav {
+	font-size: 0.875rem;
+	.font(@stack-raleway, 800, normal, none, uppercase);
+	letter-spacing: 0.125em;
+	ul {
+		display: inline-block;
+		margin: 1rem 0;
+		li {
+			float: left;
+			margin-right: 1rem;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

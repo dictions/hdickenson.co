@@ -1,0 +1,47 @@
+.hide-small {
+	@media (max-width: @small) {
+		display: none !important;
+	}
+}
+.hide-medium {
+	@media (min-width:(@small+1)) and (max-width: @medium) {
+		display: none !important;
+	}
+}
+.hide-large {
+	@media (min-width:(@medium+1)) and (max-width: @large) {
+		display: none !important;
+	}
+}
+.hide-xl {
+	@media (min-width:(@large+1)) {
+		display: none !important;
+	}
+}
+
+.show-small {
+	@media (min-width: @small+1) {
+		display: none !important;
+	}
+}
+.show-medium {
+	@media (max-width:(@small)) {
+		display: none !important;
+	}
+	@media (min-width:(@medium+1)) {
+		display: none !important;
+	}
+}
+.show-large {
+	@media (max-width:(@medium)) {
+		display: none !important;
+	}
+	@media (min-width:(@large+1)) {
+		display: none !important;
+	}
+}
+.show-xl {
+	@media (min-width:(@large)) {
+		display: none !important;
+	}
+}

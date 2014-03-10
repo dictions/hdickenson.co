@@ -10,6 +10,7 @@
   "private": true,
   "dependencies": {
     "jquery": "~2.1.0",
-    "reset-css": "~2.0.20110126"
+    "reset-css": "~2.0.20110126",
+    "masonry": "~3.1.4"
   }
 }
