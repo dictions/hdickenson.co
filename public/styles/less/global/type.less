@@ -37,7 +37,7 @@ a {
 	border: @stroke solid;
 	.font(@stack-raleway, 900, normal, none, uppercase);
 	font-size: 1.125rem;
-	letter-spacing: 0.25em;
+	letter-spacing: @letter-spacing * 2;
 	padding: 0.875em 1.25em 0.875em 1.25em;
 	display: inline-block;
 }
@@ -45,7 +45,7 @@ a {
 .contact-nav {
 	font-size: 0.875rem;
 	.font(@stack-raleway, 800, normal, none, uppercase);
-	letter-spacing: 0.125em;
+	letter-spacing: @letter-spacing;
 	ul {
 		display: inline-block;
 		margin: 1rem 0;

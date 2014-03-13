@@ -1,6 +1,9 @@
 .blue {
   color: #323a47;
 }
+.hover-blue:hover {
+  color: #323a47;
+}
 .bg-blue {
   background-color: #323a47;
 }
@@ -10,11 +13,17 @@
 .bg-yellow {
   background-color: #deb33e;
 }
+.hover-yellow:hover {
+  color: #deb33e;
+}
 .white {
   color: white;
 }
 .bg-white {
   background-color: white;
+}
+.hover-white:hover {
+  color: white;
 }
 @media (max-width: 768px) {
   .hide-small {
@@ -222,7 +231,7 @@ a {
 }
 #hero {
   margin-top: -30px;
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
   text-align: center;
 }
 #hero hgroup {
@@ -233,7 +242,6 @@ a {
   -o-transform: translate(0, -50%);
   transform: translate(0, -50%);
   width: 100%;
-  letter-spacing: 0.125em;
   padding: 0 2rem;
 }
 #hero hgroup h1 {
@@ -243,6 +251,10 @@ a {
   margin-top: 0.375em;
   font-size: 1.375rem;
   line-height: 1.375em;
+}
+#hero hgroup h1,
+#hero hgroup h2 {
+  letter-spacing: 0.125em;
 }
 #hero footer {
   position: absolute;
@@ -264,7 +276,7 @@ a {
 }
 #root-footer {
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 8rem 0;
 }
 #root-footer img {
   display: block;

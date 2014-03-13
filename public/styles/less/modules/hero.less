@@ -1,13 +1,12 @@
 #hero {
 	margin-top: -30px;
-	margin-bottom: 8rem;
+	margin-bottom: 10rem;
 	text-align: center;
 	hgroup {
 		position: absolute;
 		top: 50%;
 		.transform(translate(0,-50%)); //vertical align;
 		width: 100%;
-		letter-spacing: 0.125em;
 		padding: 0 2rem;
 		h1 {
 			font-size: 4.75rem;
@@ -16,6 +15,9 @@
 			margin-top: 0.375em;
 			font-size: 1.375rem;
 			line-height: 1.375em;
+		}
+		h1, h2 {
+			letter-spacing: @letter-spacing;
 		}
 	}
 	footer {
