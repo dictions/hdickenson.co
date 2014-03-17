@@ -3,6 +3,17 @@
 // sitewide scripts
 var Sitewide = {
 
+	scrollToDiv : function(div, offset){
+
+		var $div = $(div);
+		var topOffset = offset;
+
+		$('html, body').animate({
+			scrollTop: $div.offset().top + topOffset
+		}, 600, 'easeInOutQuint');
+
+	},
+
 	init: function(){
 
 	}
@@ -13,6 +24,7 @@ var Sitewide = {
 var HomeTemplate = function(){
 
 	this.masonryContainer = document.querySelector('#portfolio');
+	this.$portfolioImages = $('#portfolio img');
 
 };
 
@@ -20,14 +32,43 @@ HomeTemplate.prototype.init = function(){
 
 	var self = this;
 
-	// set up masonry 
-	var msnry = new Masonry(self.masonryContainer, {
-		'gutter': 16,
-		'transitionDuration': '0.25s'
+	this.initMasonry();
+
+	//
+	// Homepage Event Handlers
+	//
+	// see more work link scroll 
+	$('#hero-call').click(function(){
+		Sitewide.scrollToDiv('#main-container', -200); // 200 = 12.5rem
+		return false;
+	});
+	// see more work link scroll 
+	$('#footer-hire-status').hover(function(){
+		console.log('yo');
+		$('#footer-postmark').toggleClass('animate');
 	});
 
 };
 
+HomeTemplate.prototype.initMasonry = function(){
+
+	var self = this;
+
+	var msnry = new Masonry(self.masonryContainer, {
+		'gutter': 16,
+		'transitionDuration': '0.15s'
+	});
+
+	// set up masonry after portfolio images are loaded
+	var imageCount = 0;
+	this.$portfolioImages.load(function(){
+		imageCount++;
+		if (imageCount === self.$portfolioImages.length) {
+			setTimeout(msnry.layout(),10);
+		}
+	});
+
+}
 
 // init sitewide and template
 $(window).ready(function(){
@@ -42,4 +83,12 @@ $(window).ready(function(){
 	Sitewide.init();
 	template.init();
 
+});
+
+// custom easing for scrollToDiv
+jQuery.extend(jQuery.easing, {
+	easeInOutQuint: function (x, t, b, c, d) {
+		if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
+		return c/2*((t-=2)*t*t*t*t + 2) + b;
+	}
 });

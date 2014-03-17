@@ -1,3 +1,17 @@
+// media queries use zurb foundation's mobile first principle (extend as you grow)
+@small-up: ~'screen and (min-width: @{xs})';
+@medium-up: ~'screen and (min-width: @{small})';
+@large-up: ~'screen and (min-width: @{medium})';
+@xl-up: ~'screen and (min-width: @{large})';
+
+@portrait: ~'screen (orientation:portrait)';
+@landscape: ~'screen (orientation:landscape)';
+
+.hide-xs {
+	@media (max-width: @xs) {
+		display: none !important;
+	}
+}
 .hide-small {
 	@media (max-width: @small) {
 		display: none !important;
@@ -19,6 +33,11 @@
 	}
 }
 
+.show-xs {
+	@media (min-width: @xs+1) {
+		display: none !important;
+	}
+}
 .show-small {
 	@media (min-width: @small+1) {
 		display: none !important;

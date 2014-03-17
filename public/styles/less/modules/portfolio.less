@@ -1,10 +1,35 @@
+// portfolio grid loop
+.generate-grid(@media-query, @columns) {
+	@media @media-query {
+		width: (@columns * @grid-column) + ((@columns - 1) * @grid-gutter);
+	}
+}
+
 #portfolio {
+	text-align: center;
 	margin: 0 auto;
-	max-width: @medium;
-	a, li, img {
+	width: 100%;
+	// generate media queries for grid
+	.generate-grid(@small-up, 2);
+	.generate-grid(@medium-up, 3);
+	.generate-grid(@large-up, 4);
+	.generate-grid(@xl-up, 5);
+	a, img, li {
 		display: block;
 	}
 	li {
-		margin-bottom: @grid-gutter;
+		margin-bottom: @stroke;
+		width: 100%;
+	}
+	img {
+		width: 100%;
+		margin: 0 auto;
+	}
+	@media @small-up {
+		li {
+			display: block;
+			width: auto;
+			margin-bottom: @grid-gutter;
+		}
 	}
 }
