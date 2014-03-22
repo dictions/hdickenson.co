@@ -6,3 +6,18 @@ html, body {
 *, *:before, *:after {
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
+
+.row {
+	margin: 0 auto;
+	width: 100%;
+	// generate media queries for grid
+	.generate-grid(@small-up, 2);
+	.generate-grid(@medium-up, 3);
+	.generate-grid(@large-up, 4);
+	.generate-grid(@xl-up, 5);
+
+	&.text {
+		width: 100%;
+		.generate-grid(@medium-up, 3);
+	}
+}

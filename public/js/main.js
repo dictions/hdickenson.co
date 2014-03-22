@@ -34,17 +34,14 @@ HomeTemplate.prototype.init = function(){
 
 	this.initMasonry();
 
-	//
-	// Homepage Event Handlers
-	//
 	// see more work link scroll 
 	$('#hero-call').click(function(){
-		Sitewide.scrollToDiv('#main-container', -200); // 200 = 12.5rem
+		Sitewide.scrollToDiv('#portfolio', -200); // 200 = 12.5rem
 		return false;
 	});
-	// see more work link scroll 
+
+	// animated postmark handler
 	$('#footer-hire-status').hover(function(){
-		console.log('yo');
 		$('#footer-postmark').toggleClass('animate');
 	});
 

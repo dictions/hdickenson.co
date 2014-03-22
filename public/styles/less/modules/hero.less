@@ -1,6 +1,6 @@
 #hero {
 	height: 100%;
-	margin-top: -30px;
+	margin-top: -36px;
 	margin-bottom: 6.25rem;
 	text-align: center;
 	background-image: url('/img/film.jpg');
@@ -9,7 +9,7 @@
 	hgroup {
 		position: absolute;
 		top: 50%;
-		.transform(translate(0,-50%)); //vertical align;
+		.transform(translateY(-50%)); //vertical align;
 		width: 100%;
 		padding: 0 2rem;
 		h1 {
@@ -29,5 +29,12 @@
 		bottom: @stroke;
 		left: 0;
 		width: 100%;
+	}
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		-webkit-transform-origin: 50% 0%;
+		.transform(translate(-60px,-178px) scale(1.25,1.25));
 	}
 }
