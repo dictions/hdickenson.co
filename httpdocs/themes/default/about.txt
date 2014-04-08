@@ -1,0 +1,5 @@
+Theme name:    Hunter Dickenson
+Description:   Portfolio Theme
+Author name:   Ian Williams
+Author site:   http://ianwillia.ms
+License:       Hunter Dickenson

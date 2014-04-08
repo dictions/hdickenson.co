@@ -316,6 +316,15 @@ i.social.twitter {
     margin-bottom: 1rem;
   }
 }
+.portfolio-image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  z-index: 1000000;
+}
 #root-footer {
   text-align: center;
   margin: 8rem 0;
