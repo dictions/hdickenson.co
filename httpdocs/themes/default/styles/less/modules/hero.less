@@ -1,0 +1,40 @@
+#hero {
+	height: 100%;
+	margin-top: -36px;
+	margin-bottom: 6.25rem;
+	text-align: center;
+	background-image: url('../../img/film.jpg');
+	background-size: 100%;
+	background-size: cover;
+	hgroup {
+		position: absolute;
+		top: 50%;
+		.transform(translateY(-50%)); //vertical align;
+		width: 100%;
+		padding: 0 2rem;
+		h1 {
+			font-size: 4.75rem;
+		}
+		h2 {
+			margin-top: 0.375em;
+			font-size: 1.375rem;
+			line-height: 1.375em;
+		}
+		h1, h2 {
+			letter-spacing: @letter-spacing;
+		}
+	}
+	footer {
+		position: absolute;
+		bottom: @stroke;
+		left: 0;
+		width: 100%;
+	}
+
+	.logo {
+		position: absolute;
+		top: 50%;
+		-webkit-transform-origin: 50% 0%;
+		.transform(translate(-60px,-178px) scale(1.25,1.25));
+	}
+}

@@ -128,6 +128,9 @@ body {
     width: 46.25rem;
   }
 }
+.no-scroll {
+  overflow: hidden;
+}
 @font-face {
   font-family: 'Icon';
   src: url('../../fonts/icon/icon.eot') format('eot'), url('../../fonts/icon/icon.woff') format('woff'), url('../../fonts/icon/icon.ttf') format('truetype');
@@ -315,6 +318,19 @@ i.social.twitter {
     width: auto;
     margin-bottom: 1rem;
   }
+}
+.portfolio-image-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1000000;
+}
+.portfolio-image-viewer.hidden {
+  opacity: 0;
 }
 #root-footer {
   text-align: center;

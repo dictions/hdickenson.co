@@ -75,13 +75,18 @@ HomeTemplate.prototype.initMasonry = function(){
 
 HomeTemplate.prototype.putPortfolioViewer = function(link){
 
+	var l = link;
+
+
 	$(this.masonryContainer).after(
-		'<div class="portfolio-image-viewer"' +
-		'style="\ background-image:url(' +
-		link +
-		')\">' +
-		'</div>'
+		'<div class="portfolio-image-viewer hidden"></div>'
 	);
+
+	$.get(l,function(){
+		$('.portfolio-image-viewer').css('background-image', 'url(' + l + ')').removeClass('hidden');
+	});
+
+	$('body').addClass('no-scroll');
 
 }
 

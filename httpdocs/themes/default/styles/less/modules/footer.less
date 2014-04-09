@@ -1,0 +1,60 @@
+#root-footer {
+	text-align: center;
+	margin: 8rem 0;
+	img, svg {
+		display: block;
+		margin: 0 auto;
+		.transform(translateX(-20px));
+	}
+	.link-me-bro {
+		margin: 2rem 0 1.5rem 0;
+		i {
+			vertical-align: baseline;
+		}
+	}
+}
+
+// postmark animation
+#footer-postmark.animate #postmark-waves {
+	.animation(moveWaves 750ms infinite linear forwards);
+}
+#footer-postmark.animate #postmark-stroke-caps {
+	.animation(moveCaps 750ms infinite linear forwards);
+}
+
+@-webkit-keyframes moveCaps {
+	0%   { .transform(translate(0,0)); }
+	50%  { .transform(translate(0,4.5px)) }
+	100% { .transform(translate(0,0)); }
+}
+@-moz-keyframes moveCaps {
+	0%   { .transform(translate(0,0)); }
+	50%  { .transform(translate(0,4.5px)) }
+	100% { .transform(translate(0,0)); }
+}
+@-o-keyframes moveCaps {
+	0%   { .transform(translate(0,0)); }
+	50%  { .transform(translate(0,4.5px)) }
+	100% { .transform(translate(0,0)); }
+}
+@keyframes moveCaps {
+	0%   { .transform(translate(0,0)); }
+	50%  { .transform(translate(0,4.5px)) }
+	100% { .transform(translate(0,0)); }
+}
+@-webkit-keyframes moveWaves {
+	0%   { .transform(translate(0,0)); }
+	100%  { .transform(translate(-27px,0)) }
+}
+@-moz-keyframes moveWaves {
+	0%   { .transform(translate(0,0)); }
+	100%  { .transform(translate(-27px,0)) }
+}
+@-o-keyframes moveWaves {
+	0%   { .transform(translate(0,0)); }
+	100%  { .transform(translate(-27px,0)) }
+}
+@keyframes moveWaves {
+	0%   { .transform(translate(0,0)); }
+	100%  { .transform(translate(-27px,0)) }
+}
