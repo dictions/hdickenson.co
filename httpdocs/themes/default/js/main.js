@@ -71,24 +71,44 @@ HomeTemplate.prototype.initMasonry = function(){
 		}
 	});
 
-}
+};
 
 HomeTemplate.prototype.putPortfolioViewer = function(link){
 
-	var l = link;
-
+	var self = this;
 
 	$(this.masonryContainer).after(
-		'<div class="portfolio-image-viewer hidden"></div>'
+		'<div class="portfolio-image-viewer">' +
+			'<a href="/" class="exit"><i class="icon white">close</i></a>' +
+		'</div>'
 	);
 
-	$.get(l,function(){
-		$('.portfolio-image-viewer').css('background-image', 'url(' + l + ')').removeClass('hidden');
+	$.get(link,function(){
+		$('.portfolio-image-viewer').css('background-image', 'url(' + link + ')');
+		setTimeout(function(){
+			$('.portfolio-image-viewer').addClass('show');
+		},100);
 	});
 
 	$('body').addClass('no-scroll');
 
-}
+	$('.portfolio-image-viewer .exit').click(function(){
+		self.removePortfolioViewer();
+		return false;
+	});
+
+};
+
+HomeTemplate.prototype.removePortfolioViewer = function(link){
+
+	$('body').removeClass('no-scroll');
+
+	// remove viewer after hidden class is removed
+	$('.portfolio-image-viewer').removeClass('show').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd',function(){
+		$('.portfolio-image-viewer').remove();
+	});
+
+};
 
 
 

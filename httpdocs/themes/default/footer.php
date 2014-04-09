@@ -42,14 +42,14 @@
 			</svg>
 		</div>
 
-		<a href="" id="footer-hire-status" class="link-me-bro hover-yellow"><i class="icon">check </i>AVAILABLE FOR HIRE</a>
+		<a href="mailto:<?php echo site_meta('email'); ?>" id="footer-hire-status" class="link-me-bro hover-yellow"><i class="icon">check </i>AVAILABLE FOR HIRE</a>
 
 		<nav class="contact-nav">
 			<ul class="clearfix">
-				<li><a class="hover-yellow" href="/">Email</a></li>
-				<li><a class="hover-yellow" href="/">Dribbble</a></li>
-				<li><a class="hover-yellow" href="/">Instagram</a></li>
-				<li><a class="hover-yellow" href="/">Facebook</a></li>
+				<li><a class="hover-yellow" href="mailto:<?php echo site_meta('email'); ?>">Email</a></li>
+				<li><a class="hover-yellow" href="<?php echo site_meta('dribbble_link'); ?>">Dribbble</a></li>
+				<li><a class="hover-yellow" href="<?php echo site_meta('instagram_link'); ?>">Instagram</a></li>
+				<li><a class="hover-yellow" href="<?php echo site_meta('facebook_link'); ?>">Facebook</a></li>
 			</ul>
 		</nav>
 
