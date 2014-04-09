@@ -50,12 +50,12 @@
     display: none !important;
   }
 }
-@media (min-width: 520px+1) {
+@media (min-width: 521px) {
   .show-xs {
     display: none !important;
   }
 }
-@media (min-width: 768px+1) {
+@media (min-width: 769px) {
   .show-small {
     display: none !important;
   }
@@ -137,12 +137,6 @@ body {
   font-style: normal;
   font-weight: 400;
 }
-@font-face {
-  font-family: 'Social';
-  src: url('../../fonts/social/social.eot') format('eot'), url('../../fonts/social/social.woff') format('woff'), url('../../fonts/social/social.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 400;
-}
 html,
 body {
   font-family: 'Lato', san-serif;
@@ -187,10 +181,18 @@ a {
   font-style: normal;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   letter-spacing: 0.25em;
   padding: 0.875em 1.25em;
   display: inline-block;
+  width: 90%;
+}
+@media screen and (min-width: 520px) {
+  .link-me-bro {
+    margin: 0;
+    font-size: 1.125rem;
+    width: auto;
+  }
 }
 .contact-nav {
   font-size: 0.875rem;
@@ -206,8 +208,8 @@ a {
   margin: 1rem 0;
 }
 .contact-nav ul li {
-  float: left;
-  margin-right: 1rem;
+  margin: 0 0.5rem;
+  display: inline;
 }
 .contact-nav ul li:last-child {
   margin-right: 0;
@@ -252,12 +254,17 @@ i.social.twitter {
 }
 #hero {
   height: 100%;
-  margin-top: -36px;
+  margin-top: -32px;
   margin-bottom: 6.25rem;
   text-align: center;
   background-image: url('../../img/film.jpg');
   background-size: 100%;
   background-size: cover;
+}
+@media screen and (min-width: 520px) {
+  #hero {
+    margin-top: -36px;
+  }
 }
 #hero hgroup {
   position: absolute;
@@ -270,12 +277,26 @@ i.social.twitter {
   padding: 0 2rem;
 }
 #hero hgroup h1 {
-  font-size: 4.75rem;
+  font-size: 2rem;
+}
+@media screen and (min-width: 520px) {
+  #hero hgroup h1 {
+    font-size: 3.75rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  #hero hgroup h1 {
+    font-size: 4.75rem;
+  }
 }
 #hero hgroup h2 {
   margin-top: 0.375em;
-  font-size: 1.375rem;
-  line-height: 1.375em;
+}
+@media screen and (min-width: 520px) {
+  #hero hgroup h2 {
+    font-size: 1.375rem;
+    line-height: 1.375rem;
+  }
 }
 #hero hgroup h1,
 #hero hgroup h2 {
@@ -611,10 +632,11 @@ ul.tags a {
   font-style: normal;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   letter-spacing: 0.25em;
   padding: 0.875em 1.25em;
   display: inline-block;
+  width: 90%;
   font-size: 0.75em;
   opacity: 0.3;
   color: #deb33e;
@@ -622,6 +644,13 @@ ul.tags a {
   line-height: 1em;
   border-width: 2px;
   margin: 0 .75em .75em 0;
+}
+@media screen and (min-width: 520px) {
+  ul.tags a {
+    margin: 0;
+    font-size: 1.125rem;
+    width: auto;
+  }
 }
 ul.tags a:hover {
   opacity: 1;

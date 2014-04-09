@@ -10,8 +10,9 @@
 
 		<hgroup>
 			<h1>Hunter Dickenson</h1>
-			<h2>Illustrator &bull; Printmaker 
+			<h2 class="hide-xs">Illustrator &bull; Printmaker 
 			<br> Craftsman</h2>
+			<h2 class="show-xs">Illustrator Printmaker Craftsman</h2>
 		</hgroup>
 
 		<footer>

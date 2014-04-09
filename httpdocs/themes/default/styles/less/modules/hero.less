@@ -1,29 +1,48 @@
 #hero {
 	height: 100%;
-	margin-top: -36px;
+	margin-top: -32px;
 	margin-bottom: 6.25rem;
 	text-align: center;
 	background-image: url('../../img/film.jpg');
 	background-size: 100%;
 	background-size: cover;
+
+	@media @small-up {
+		margin-top: -36px;
+	}
+
 	hgroup {
 		position: absolute;
 		top: 50%;
 		.transform(translateY(-50%)); //vertical align;
 		width: 100%;
 		padding: 0 2rem;
+
 		h1 {
-			font-size: 4.75rem;
+			font-size: 2rem;
+
+			@media @small-up {
+				font-size: 3.75rem;
+			}
+			@media @medium-up {
+				font-size: 4.75rem;
+			}
 		}
+
 		h2 {
 			margin-top: 0.375em;
-			font-size: 1.375rem;
-			line-height: 1.375em;
+
+			@media @small-up {
+				font-size: 1.375rem;
+				line-height: 1.375rem;
+			}
 		}
+
 		h1, h2 {
 			letter-spacing: @letter-spacing;
 		}
 	}
+
 	footer {
 		position: absolute;
 		bottom: @stroke;
