@@ -115,6 +115,11 @@ HomeTemplate.prototype.removePortfolioViewer = function(link){
 		$('.portfolio-image-viewer').remove();
 	});
 
+	// fail safe
+	setTimeout(function(){
+		$('.portfolio-image-viewer').remove();
+	},1000);
+
 };
 
 HomeTemplate.prototype.showVideoBg = function(video){
