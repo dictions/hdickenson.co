@@ -33,7 +33,7 @@
 	<style type="text/css">
 	</style>
 </head>
-<body>
+<body class="hide">
 	<!--[if lt IE 11]>
 		<p class="browsehappy">Aw shucks! You should probably <a href="http://browsehappy.com/">upgrade your browser.</a></p>
 	<![endif]-->

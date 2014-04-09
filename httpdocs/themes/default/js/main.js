@@ -54,6 +54,10 @@ HomeTemplate.prototype.init = function(){
 	// show video background
 	this.showVideoBg(document.getElementById('bg-video'));
 
+	$(window).load(function(){
+		$('body').removeClass('hide');
+	});
+
 };
 
 HomeTemplate.prototype.initMasonry = function(){

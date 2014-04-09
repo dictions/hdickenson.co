@@ -1,5 +1,11 @@
 html, body {
 	height: 100%;
+	opacity: 1;
+	.transition(500ms opacity linear);
+}
+
+body.hide {
+	opacity: 0;
 }
 
 // apply a natural box layout model to all elements

@@ -88,6 +88,14 @@
 html,
 body {
   height: 100%;
+  opacity: 1;
+  -webkit-transition: 500ms opacity linear;
+  -moz-transition: 500ms opacity linear;
+  -o-transition: 500ms opacity linear;
+  transition: 500ms opacity linear;
+}
+body.hide {
+  opacity: 0;
 }
 *,
 *:before,
