@@ -51,6 +51,9 @@ HomeTemplate.prototype.init = function(){
 		$('#footer-postmark').toggleClass('animate');
 	});
 
+	// show video background
+	this.showVideoBg(document.getElementById('bg-video'));
+
 };
 
 HomeTemplate.prototype.initMasonry = function(){
@@ -107,6 +110,15 @@ HomeTemplate.prototype.removePortfolioViewer = function(link){
 	$('.portfolio-image-viewer').removeClass('show').on('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd',function(){
 		$('.portfolio-image-viewer').remove();
 	});
+
+};
+
+HomeTemplate.prototype.showVideoBg = function(video){
+
+	video.addEventListener('loadeddata', function() {
+		console.log('loaded');
+		$('.bg-video-container').addClass('show');
+	}, false);
 
 };
 

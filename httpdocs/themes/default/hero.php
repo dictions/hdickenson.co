@@ -1,5 +1,11 @@
 	<header id="hero" class="bg-yellow" data-template="home">
 
+		<div class="bg-video-container">
+			<video id="bg-video" autoplay loop>
+				<source src="<?php echo theme_url('/img/film.mp4')?>" type="video/mp4">
+			</video>
+		</div>
+
 		<img class="logo" src="<?php echo theme_url('/img/hero_logo.svg')?>">
 
 		<hgroup>

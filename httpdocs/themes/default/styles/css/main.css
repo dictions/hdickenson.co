@@ -296,6 +296,19 @@ i.social.twitter {
   -o-transform: translate(-60px, -178px) scale(1.25, 1.25);
   transform: translate(-60px, -178px) scale(1.25, 1.25);
 }
+#hero .bg-video-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: 1s opacity linear;
+  -moz-transition: 1s opacity linear;
+  -o-transition: 1s opacity linear;
+  transition: 1s opacity linear;
+}
+#hero .bg-video-container.show {
+  opacity: 1;
+}
 #portfolio {
   text-align: center;
 }
